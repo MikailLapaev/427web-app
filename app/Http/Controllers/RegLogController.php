@@ -10,7 +10,7 @@ class RegLogController extends Controller
 {
     public function create()
     {
-        return view('register');
+        return view('pages.register');
     }
 
     public function register(Request $request)
@@ -29,6 +29,22 @@ class RegLogController extends Controller
         ]);
         $credentials = $request->only('email', 'password');
         Auth::attempt($credentials, true);
+        return redirect(route('home'));
+    }
+
+    public function edit(){
+        return view('pages.login');
+    }
+
+    public function login(Request $request){
+        $credentials = $request->only('email', 'password');
+        if(!Auth::attempt($credentials, true))
+            return back()->withInput()->withErrors(['email' => 'Введены некорректные данные']);
+        return redirect(route('home'));
+    }
+
+    public function logout(){
+        Auth::logout();
         return redirect(route('home'));
     }
 }

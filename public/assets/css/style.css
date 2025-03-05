@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    transition: .4s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    /* gap: 50px; */
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.card_item-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.item_card{
+    width: 300px;
+    height: 400px;
+}
+
+.cover{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+img.item_card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a.btn{
+    padding: 14px 36px;
+    border: 2px solid #fc2d2d;
+    background-color: #fc2d2d;
+    border-radius: 7px;
+    line-height: 100%;
+    font-size: 16px;
+    color: #f9f9f9;
+    font-weight: 400;
+    display: inline-block;
+}
+
+a.edit{
+    padding: 12px 20px;
+    border: 2px solid #37bd19;
+    background-color: #37bd19;
+}
+
+input.del{
+    padding: 12px 20px;
+    border: 2px solid #525252;
+    background-color: #525252;
+    color: #f9f9f9;
+    border-radius: 7px;
+    line-height: 100%;
+    font-size: 16px;
+    color: #f9f9f9;
+    font-weight: 400;
+    display: inline-block;
+}
+
+h4{
+    font-size: 28px;
+    color: #191919;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 18px;
+    color: #6a6a6a;
+    font-weight: 400;
+}
+
+.btn_price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
